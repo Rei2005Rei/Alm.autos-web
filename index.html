@@ -285,11 +285,11 @@
 
             <div class="box">
                 <div class="box-img">
-                    <img src="qera18.jpeg" alt="Audi Q7 Automatic" onclick="openModal(this)">
+                    <img src="qera18.jpeg" alt="Audi Q5 Automatic" onclick="openModal(this)">
                 </div>
-                <p>2007</p>
-                <h3>Audi Q7 Automatic</h3>
-                <h2> €44 <span>/day</span></h2>
+                <p>2012</p>
+                <h3>Audi Q5 Automatic</h3>
+                <h2> €45 <span>/day</span></h2>
             </div>
 
             <div class="box">
@@ -317,6 +317,15 @@
                 <p>2008</p>
                 <h3>Mercedes-Benz Vito Automatic</h3>
                 <h2> €67 <span>/day</span></h2>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="qera22.jpeg" alt="Audi Q7 6+1" onclick="openModal(this)">
+                </div>
+                <p>2008</p>
+                <h3>Audi Q7 6+1 </h3>
+                <h2> €44 <span>/day</span></h2>
             </div>
 
 
@@ -416,28 +425,28 @@
 
                 <div class="input-box2">
                     <label for="name"><span>Up Date :</span></label>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="up_date" id="date">
                 </div>
 
                 <br>
 
                 <div class="input-box2">
                     <label for="name"><span>Dropout Date :</span></label>
-                    <input type="date" name="date1" id="date1">
+                    <input type="date" name="dropout_date" id="date1">
                 </div>
 
                 <br>
 
                 <div class="input-box2">
                     <label for="email_id"><span>Email :</span></label>
-                    <input type="text" name="email_id" id="email_id" placeholder="Enter your email...">
+                    <input type="text" name="email" id="email_id" placeholder="Enter your email...">
                 </div>
 
                 <br>
 
                 <div class="input-box2">
                     <label for="number"><span>Phone Number :</span></label>
-                    <input type="text" name="number" id="number" placeholder="Enter your phone number...">
+                    <input type="text" name="phone" id="number" placeholder="Enter your phone number...">
                 </div>
 
                 <br>
@@ -516,6 +525,19 @@
     <img class="modal-content" id="modalImg">
   </div>
   
+
+
+  <!-- EmailJS CDN dhe inicializimi -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("0mA8VnlF0MoQP8zOv"); // Zëvendësoje me çelësin tënd publik
+  })();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </body>
 

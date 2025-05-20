@@ -36,25 +36,63 @@
 
 
 
-
-        
         const btn = document.getElementById('button');
 
         document.getElementById('form')
-         .addEventListener('submit', function(event) {
-           event.preventDefault();
+          .addEventListener('submit', function(event) {
+            event.preventDefault();
         
-           btn.value = 'Sending...';
+            // Marrim të gjitha input-et dhe textarea nga forma
+            const inputs = this.querySelectorAll('input, textarea');
+            let allFilled = true;
         
-           const serviceID = 'default_service';
-           const templateID = 'template_ql2jitn';
-        
-           emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-              btn.value = 'Send';
-              alert('Sent!');
-            }, (err) => {
-              btn.value = 'Send';
-              alert(JSON.stringify(err));
+            inputs.forEach(input => {
+              if (input.value.trim() === '') {
+                allFilled = false;
+              }
             });
-        });
+        
+            // Nëse ka fusha bosh, japim mesazh dhe ndalojmë dërgimin
+            if (!allFilled) {
+              Swal.fire({
+                icon: 'warning',
+                title: 'Incomplete!',
+                text: 'Please fill in all the required fields before submitting.',
+              });
+              return;
+            }
+        
+            btn.value = 'Sending...';
+        
+            const serviceID = 'default_service';
+            const templateID = 'template_dvotpdj';
+        
+            emailjs.sendForm(serviceID, templateID, this)
+              .then(() => {
+                btn.value = 'Send Email';
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Your message was sent successfully!',
+                });
+                
+                this.reset(); // pastron formën
+                if (Notification.permission === "granted") {
+                  new Notification("Booking Received", {
+                    body: "You have received a new booking request!",
+                    icon: "logo1.jpeg" // opsionale: vendos ikonën tënde
+                  });
+                }
+                
+              }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+              });
+          });
+
+
+          if ("Notification" in window && Notification.permission !== "granted") {
+            Notification.requestPermission();
+          }
+          
+        
