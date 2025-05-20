@@ -7,7 +7,7 @@
         var options = {
       "enabled":true,
       "chatButtonSetting":{
-          "backgroundColor":"#f87c7c",
+          "backgroundColor":"#dcafff",
           "ctaText":"Contact Us",
           "borderRadius":"25",
           "marginLeft":"0",
@@ -18,13 +18,13 @@
       "brandSetting":{
           "brandName":"ALM Autos",
           "brandSubTitle":"The team typically replies in a few minutes.",
-          "brandImg":"https://assets.mofoprod.net/network/images/whatsapp_logo.original.jpg",
+          "brandImg":"whatsappimg.png",
           "welcomeText":"Hi there!\nHow can I help you?",
-          "backgroundColor":"#0a5f54",
+          "backgroundColor":"#6b1122",
           "ctaText":"Contact",
           "borderRadius":"25",
           "autoShow":false,
-          "phoneNumber":"355699999444"
+          "phoneNumber":"355685658888"
       }
     };
         s.onload = function() {

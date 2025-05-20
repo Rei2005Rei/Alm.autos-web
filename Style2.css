@@ -12,10 +12,10 @@
 }
 
 :root {
-    --third-color: #fe5b3d;
-    --second-color: #ff0000;
+    --third-color: #b68bff;
+    --second-color: #8d5dab;
     --text-color: #444;
-    --first-color: #c50000;
+    --first-color: #a04cff;
     --gradient: linear-gradient(#fe5b3d, #ff0000, #444, #c50000);
 
 }
@@ -120,7 +120,7 @@ header {
 } */
 
 .home {
-    background-color: #eeeff1;
+    background-color: #f7e6ff;
     /* padding-left: 0px;
     padding-right: 0px; */
     padding-bottom: 0px;
@@ -153,7 +153,7 @@ header {
 .home-wrapper .right-side::before {
     content: '';
     position: absolute;
-    background-color: #c50000;
+    background-color: #614189;
     width: 80%;
     height: 85%;
     z-index: 0;
@@ -270,7 +270,7 @@ header {
     padding: 10px;
     background: #eeeff1;
     border-radius: 0.5rem;
-    color: var(--first-color);
+    color:#0088ff;
 
 }
 
@@ -286,6 +286,10 @@ header {
     color: #fff;
 }
 
+.services{
+    background-color: #f7e6ff;
+}
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
@@ -297,6 +301,7 @@ header {
     padding: 10px;
     border-radius: 1rem;
     box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 
 }
 
@@ -371,7 +376,7 @@ header {
     display: flex;
     justify-content: center;
     
-    background: #ff0000;
+    background: #896aa1;
     color: #fff;
     padding: 10px;
     border-radius: 0.5rem;
@@ -416,14 +421,17 @@ header {
 }
 
 .about-text .btn:hover {
-    background-color: #c50000;
+    background-color: #6c00c5;
 }
+
+
+
 
 
 .footer {
     position: relative;
     width: 100%;
-    background: #e24d4d;
+    background: #9c4de2;
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -491,7 +499,7 @@ header {
     gap: 1rem;
     bottom: 2rem;
     left: 100px;
-    background: rgb(225, 201, 201);
+    background-color: #8e5e8d;
     padding: 20px;
     border-radius: 20px;
 
